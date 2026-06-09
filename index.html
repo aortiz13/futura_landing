@@ -632,17 +632,17 @@
     </div>
     <div class="testimonial reveal reveal-delay-2">
       <div class="stars">★★★★★</div>
-      <p class="quote">La integración con nuestro software fue más fácil de lo esperado. En 48 horas funcionando. Mi equipo ahora se dedica a dar mejor atención presencial.</p>
-      <p class="testimonial-author">Dr. Miguel Sanz</p>
-      <p class="testimonial-clinic">Fisioterapia Sanz & Morales, Madrid · 5 fisios</p>
-      <p class="testimonial-result">−65% carga administrativa en recepción</p>
+      <p class="quote">Llevábamos meses con la recepción colapsada. Desde que activamos el agente, los pacientes reciben respuesta inmediata a cualquier hora. Las cancelaciones bajaron a la mitad y el equipo por fin puede centrarse en la consulta.</p>
+      <p class="testimonial-author">Dr. Carlos Herrera</p>
+      <p class="testimonial-clinic">Clínica Dental Herrera, Madrid · 4 sillones</p>
+      <p class="testimonial-result">−52% cancelaciones · +38% citas online en el primer mes</p>
     </div>
     <div class="testimonial reveal reveal-delay-3">
       <div class="stars">★★★★★</div>
-      <p class="quote">Lo que más me convenció fue poder probarlo antes de contratar. Llamé al agente y no se distinguía de una persona real. Firmamos al día siguiente.</p>
-      <p class="testimonial-author">Ana García</p>
-      <p class="testimonial-clinic">Centro de Psicología García, Barcelona</p>
-      <p class="testimonial-result">100% llamadas atendidas · 3× más primeras visitas</p>
+      <p class="quote">Al principio dudé si los pacientes lo aceptarían. La sorpresa fue que varios nos han dicho que prefieren escribir a llamar. Ahora gestionamos presupuestos, recordatorios y dudas postoperatorias sin tocar el teléfono.</p>
+      <p class="testimonial-author">Dra. Patricia Molina</p>
+      <p class="testimonial-clinic">Sonrisas Molina Dental, Sevilla · 3 sillones</p>
+      <p class="testimonial-result">100% mensajes respondidos · ×2 consultas de presupuesto</p>
     </div>
   </div>
 </section>
@@ -997,7 +997,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
     const name = nameInput.value.trim().slice(0, 80);
 
     setLoading(true);
-    setStatus('info', 'Disparando llamada... Atendé en unos segundos.');
+    setStatus('info', 'Disparando llamada... Atiende en unos segundos.');
 
     try {
       const res = await fetch(FUTURA_API_BASE + '/api/public/demo-call', {
@@ -1025,7 +1025,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
         return;
       }
 
-      setStatus('success', (data && data.message) || '✓ Llamada en camino. Atendé tu teléfono.');
+      setStatus('success', (data && data.message) || '✓ Llamada en camino. Atiende tu teléfono.');
       badge.textContent = 'Llamada disparada';
       quote.innerHTML = '"Tu teléfono va a sonar en segundos..."';
       // Sin spinner: la llamada ya se disparó, no hay nada que esperar.
